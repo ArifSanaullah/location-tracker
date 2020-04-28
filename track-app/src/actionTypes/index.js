@@ -1,0 +1,15 @@
+export const SIGNUP = "SIGNUP";
+export const SIGNUP_SUCCESS = "SIGNUP_SUCCESS";
+export const SIGNUP_FAIL = "SIGNUP_FAIL";
+export const SIGNIN = "SIGNIN";
+export const SIGNIN_SUCCESS = "SIGNIN_SUCCESS";
+export const SIGNIN_FAIL = "SIGNIN_FAIL";
+export const SIGNOUT = "SIGNOUT";
+export const ADD_CURRENT_LOCATION = "ADD_CURRENT_LOCATION";
+export const ADD_LOCATION = "ADD_LOCATION";
+export const START_RECORDING = "START_RECORDING";
+export const STOP_RECORDING = "STOP_RECORDING";
+export const CHANGE_NAME = "CHANGE_NAME";
+export const FETCH_TRACKS = "FETCH_TRACKS";
+export const CREATE_TRACK = "CREATE_TRACK";
+export const RESET_CREATE_TRACK_FORM = "RESET_CREATE_TRACK_FORM";

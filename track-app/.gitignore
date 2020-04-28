@@ -1,0 +1,19 @@
+node_modules/**/*
+.expo/*
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+web-report/
+<<<<<<< HEAD
+=======
+food/
+
+>>>>>>> 057a26ccb04efa01d991e23f76023c53e05a505d
+
+# macOS
+.DS_Store
