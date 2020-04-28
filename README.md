@@ -8,9 +8,9 @@
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/ArifSanaullah/React-Native)](https://github.com/ArifSanaullah/React-Native/issues)
-[![GitHub Pull Requests](https://img.shields.io/badge/pulls-0-yellow)](https://github.com/ArifSanaullah/React-Native/pulls)
-[![License](https://img.shields.io/github/license/ArifSanaullah/React-Native)](/LICENSE)
+[![GitHub Issues](https://img.shields.io/github/issues/ArifSanaullah/location-tracker)](https://github.com/ArifSanaullah/location-tracker/issues)
+[![GitHub Pull Requests](https://img.shields.io/badge/pulls-0-yellow)](https://github.com/ArifSanaullah/location-tracker/pulls)
+[![License](https://img.shields.io/github/license/ArifSanaullah/location-tracker)](/LICENSE)
 
 </div>
 
@@ -49,13 +49,13 @@ To run this project locally on your machine you need to run following commands i
 Say what the step will be
 
 ```
-git clone https://github.com/ArifSanaullah/React-Native
+git clone https://github.com/ArifSanaullah/location-tracker
 ```
 
 then change current working directory by follwing command
 
 ```
-cd React-Native
+cd location-tracker/track-app
 ```
 
 in that directory run to install all the dependencies
@@ -73,6 +73,50 @@ npm start
 ```
 
 Once command executed successfully a new browser tab will open in your default browser with a QR code at the bottom left corner.
+
+Now you have to start the server by opening a new tab in your terminal/command line. You can open new tab in terminal by pressing ctrl+shift+tab in ubuntu.
+
+In new tab run to change the current working directory
+
+```
+cd ../track-server
+```
+
+once again run
+
+```
+npm install
+```
+
+to install all the dependencies to start the server. When installation is done. Execute
+
+```
+npm run dev
+```
+
+to start the server. With above command server will start listening to the port 3000 and will connect to mongoDB Atlas as well.
+You will see two outputs in your terminal saying:
+
+```
+Listening on port 3000...
+Connected to mongoDB instance.
+```
+
+one after other.
+After making sure that server is up and running open up a new terminal tab and run following command:
+if you don't have ngrok installed you can install it from this link: [here](https://ngrok.com/download)
+
+```
+ngrok http 3000
+```
+
+Above command will result in very generic output saying :
+Session Status online
+Session Expires 7 hours, 59 minutes
+Version 2.3.5
+Region United States
+In that output you will see a random http link (e.g http://22d0d741.ngrok.io/ -> http:/localhost:3000)
+copy that http link(similar to this one "http://22d0d741.ngrok.io/") and go to [tracker.js](./track-app/src/api/tracker.js) and replace the string at ling no 5 by the url you copied from your terminal when you run that ngrok command. Save the file and that's it. Application and server both are up and running.
 
 From now on you've got 3 options to run the application.
 
@@ -117,7 +161,7 @@ To deploy this, I used Google cloud platform and Kubernetes. It is great applica
 ## ✍️ Authors <a name = "authors"></a>
 
 - [@ArifSanaullah](https://github.com/ArifSanaullah) - Idea & Initial work
-  See also the list of [contributors](https://github.com/ArifSanaullah/React-Native/graphs/contributors) who participated in this project.
+  See also the list of [contributors](https://github.com/ArifSanaullah/location-tracker/graphs/contributors) who participated in this project.
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
